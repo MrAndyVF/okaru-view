@@ -1,4 +1,4 @@
-# okaru-view: compila la rama main del checkout (OKARU_VIEW_REPO, por defecto ~/Projects/okaru-view).
+# okaru-view: compila la rama main del checkout (OKARU_VIEW_REPO, por defecto ~/Projects/okaru-project/okaru-view).
 pkgname=okaru-view
 pkgver=1.0.0
 pkgrel=1
@@ -11,7 +11,7 @@ _core=$(pacman -Q okaru-core 2>/dev/null | cut -d' ' -f2)
 depends=("okaru-core${_core:+=$_core}" exiv2 gdk-pixbuf2 libraw libjpeg-turbo)
 makedepends=(meson ninja pkgconf okaru-core tomlplusplus nlohmann-json stb) # nlohmann-json: la piden las cabeceras del núcleo (okaru-core <= 1.2.4 no la declaraba)
 options=('!debug' '!lto')
-source=("okaru-view::git+file://${OKARU_VIEW_REPO:-$HOME/Projects/okaru-view}#branch=main")
+source=("okaru-view::git+file://${OKARU_VIEW_REPO:-$HOME/Projects/okaru-project/okaru-view}#branch=main")
 sha256sums=(SKIP)
 
 pkgver() {
