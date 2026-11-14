@@ -9,7 +9,7 @@ license=(MIT)
 # Sin ABI estable: depende de la versión exacta del núcleo con el que se compiló (la instalada al compilar).
 _core=$(pacman -Q okaru-core 2>/dev/null | cut -d' ' -f2)
 depends=("okaru-core${_core:+=$_core}" exiv2 gdk-pixbuf2 libraw libjpeg-turbo)
-makedepends=(meson ninja pkgconf okaru-core tomlplusplus nlohmann-json) # nlohmann-json: la piden las cabeceras del núcleo (okaru-core <= 1.2.4 no la declaraba)
+makedepends=(meson ninja pkgconf okaru-core tomlplusplus nlohmann-json stb) # nlohmann-json: la piden las cabeceras del núcleo (okaru-core <= 1.2.4 no la declaraba)
 options=('!debug' '!lto')
 source=("okaru-view::git+file://${OKARU_VIEW_REPO:-$HOME/Projects/okaru-view}#branch=main")
 sha256sums=(SKIP)
