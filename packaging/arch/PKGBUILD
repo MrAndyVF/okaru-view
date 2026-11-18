@@ -1,6 +1,6 @@
 # okaru-view: compila la rama main del checkout (OKARU_VIEW_REPO, por defecto ~/Projects/okaru-project/okaru-view).
 pkgname=okaru-view
-pkgver=1.0.0
+pkgver=1.0.1
 pkgrel=1
 pkgdesc='OKARU (郁): el visor de imágenes'
 arch=(x86_64)
