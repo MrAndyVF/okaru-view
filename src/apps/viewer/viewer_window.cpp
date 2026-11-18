@@ -621,7 +621,6 @@ namespace okaru::viewer {
     canvas->addChild(
         ui::inputArea({
             .out = &m_canvasInput,
-            .acceptedButtons = BTN_LEFT,
             .width = width,
             .height = height,
             .zIndex = 1,
